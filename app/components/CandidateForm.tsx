@@ -15,7 +15,7 @@ export default function CandidateForm({ onUpload }: CandidateFormProps) {
     skills: "",
     experience: "",
   });
-  const [resume, setResume] = useState<File | null>(null);
+  // const [resume, setResume] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
 
   const handleChange = (
@@ -27,7 +27,7 @@ export default function CandidateForm({ onUpload }: CandidateFormProps) {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files?.length) {
       const file = e.target.files[0];
-      setResume(file);
+      // setResume(file);
       onUpload(file); // Upload resume file
     }
   };
@@ -57,7 +57,7 @@ export default function CandidateForm({ onUpload }: CandidateFormProps) {
         skills: "",
         experience: "",
       });
-      setResume(null);
+      // setResume(null);
       setLoading(false);
     } catch (error) {
       toast.error("Error submitting form. Please try again.");
